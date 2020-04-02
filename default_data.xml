@@ -1,0 +1,79 @@
+<SPMineData>
+    <ParticleFxAssets>
+        <Item>veh_xs_vehicle_mods</Item>
+    </ParticleFxAssets>
+    <MineSets>
+        <Set name="MS_GUNRUNNING" model="w_ex_vehiclemine">
+            <Item>VEHICLE_WEAPON_MINE</Item>
+        </Set>
+        <Set name="MS_ARENA_WAR_RC" model="w_ex_arena_landmine_01b">
+            <Item>VEHICLE_WEAPON_MINE_KINETIC_RC</Item>
+            <Item>VEHICLE_WEAPON_MINE_EMP_RC</Item>
+        </Set>
+        <Set name="MS_ARENA_WAR" model="w_ex_vehiclemine">
+            <Item>VEHICLE_WEAPON_MINE_KINETIC</Item>
+            <Item>VEHICLE_WEAPON_MINE_SPIKE</Item>
+            <Item>VEHICLE_WEAPON_MINE_EMP</Item>
+            <Item>VEHICLE_WEAPON_MINE_SLICK</Item>
+            <Item>VEHICLE_WEAPON_MINE_TAR</Item>
+        </Set>
+        <Set name="MS_BOND_CAR" model="w_ex_vehiclemine">
+            <Item>VEHICLE_WEAPON_MINE_SPIKE</Item>
+            <Item>VEHICLE_WEAPON_MINE_SLICK</Item>
+        </Set>
+    </MineSets>
+    <VehicleModels>
+        <!-- Gunrunning group (vehicles drop explosive prox mine only) -->
+        <Model name="apc" mineSet="MS_GUNRUNNING" />
+        <Model name="dune3" mineSet="MS_GUNRUNNING" />
+        <Model name="halftrack" mineSet="MS_GUNRUNNING" />
+        <Model name="tampa3" mineSet="MS_GUNRUNNING" />
+        <Model name="insurgent3" mineSet="MS_GUNRUNNING" />
+        <Model name="technical3" mineSet="MS_GUNRUNNING" />
+        <Model name="khanjali" mineSet="MS_GUNRUNNING" />
+        <Model name="speedo4" mineSet="MS_GUNRUNNING" />
+        <Model name="mule4" mineSet="MS_GUNRUNNING" />
+        <Model name="pounder2" mineSet="MS_GUNRUNNING" />
+
+        <!-- JB700 special -->
+        <Model name="jb7002" mineSet="MS_BOND_CAR" />
+
+        <!-- Arena War RC group (vehicles drop kinetic/emp prox mines) -->
+        <Model name="rcbandito" mineSet="MS_ARENA_WAR_RC" />
+
+        <!-- Arena War group (vehicles drop various prox mines) -->
+        <Model name="bruiser" mineSet="MS_ARENA_WAR" />
+        <Model name="bruiser2" mineSet="MS_ARENA_WAR" />
+        <Model name="bruiser3" mineSet="MS_ARENA_WAR" />
+        <Model name="brutus" mineSet="MS_ARENA_WAR" />
+        <Model name="brutus2" mineSet="MS_ARENA_WAR" />
+        <Model name="brutus3" mineSet="MS_ARENA_WAR" />
+        <Model name="cerberus" mineSet="MS_ARENA_WAR" />
+        <Model name="cerberus2" mineSet="MS_ARENA_WAR" />
+        <Model name="cerberus3" mineSet="MS_ARENA_WAR" />
+        <Model name="dominator4" mineSet="MS_ARENA_WAR" />
+        <Model name="dominator5" mineSet="MS_ARENA_WAR" />
+        <Model name="dominator6" mineSet="MS_ARENA_WAR" />
+        <Model name="impaler2" mineSet="MS_ARENA_WAR" />
+        <Model name="impaler3" mineSet="MS_ARENA_WAR" />
+        <Model name="impaler4" mineSet="MS_ARENA_WAR" />
+        <Model name="imperator" mineSet="MS_ARENA_WAR" />
+        <Model name="imperator2" mineSet="MS_ARENA_WAR" />
+        <Model name="imperator3" mineSet="MS_ARENA_WAR" />
+        <Model name="issi4" mineSet="MS_ARENA_WAR" />
+        <Model name="issi5" mineSet="MS_ARENA_WAR" />
+        <Model name="issi6" mineSet="MS_ARENA_WAR" />
+        <Model name="monster3" mineSet="MS_ARENA_WAR" />
+        <Model name="monster4" mineSet="MS_ARENA_WAR" />
+        <Model name="monster5" mineSet="MS_ARENA_WAR" />
+        <Model name="scarab" mineSet="MS_ARENA_WAR" />
+        <Model name="scarab2" mineSet="MS_ARENA_WAR" />
+        <Model name="scarab3" mineSet="MS_ARENA_WAR" />
+        <Model name="slamvan4" mineSet="MS_ARENA_WAR" />
+        <Model name="slamvan5" mineSet="MS_ARENA_WAR" />
+        <Model name="slamvan6" mineSet="MS_ARENA_WAR" />
+        <Model name="zr380" mineSet="MS_ARENA_WAR" />
+        <Model name="zr3802" mineSet="MS_ARENA_WAR" />
+        <Model name="zr3803" mineSet="MS_ARENA_WAR" />
+    </VehicleModels>
+</SPMineData>
