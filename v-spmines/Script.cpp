@@ -61,18 +61,18 @@ bool func_8651(Vehicle vehicleEntity, Hash vehicleModel)
 	bool isSpecial = false;
 	switch (vehicleModel)
 	{
-		case VehicleModel::ZR380:
-		case VehicleModel::ZR3802:
-		case VehicleModel::ZR3803:
-		case VehicleModel::DEATHBIKE:
-		case VehicleModel::DEATHBIKE2:
-		case VehicleModel::DEATHBIKE3:
-		case VehicleModel::IMPERATOR:
-		case VehicleModel::IMPERATOR2:
-		case VehicleModel::IMPERATOR3:
-		case VehicleModel::SLAMVAN4:
-		case VehicleModel::SLAMVAN5:
-		case VehicleModel::SLAMVAN6:
+		case joaat::generate("zr380"):
+		case joaat::generate("zr3802"):
+		case joaat::generate("zr3803"):
+		case joaat::generate("deathbike"):
+		case joaat::generate("deathbike2"):
+		case joaat::generate("deathbike3"):
+		case joaat::generate("imperator"):
+		case joaat::generate("imperator2"):
+		case joaat::generate("imperator3"):
+		case joaat::generate("slamvan4"):
+		case joaat::generate("slamvan5"):
+		case joaat::generate("slamvan6"):
 			isSpecial = true;
 			break;
 	}
@@ -125,14 +125,14 @@ void ScriptInit()
 				continue;
 			}
 
-			Hash setHash = MISC::GET_HASH_KEY(name.value());
+			Hash setHash = joaat::generate(name.value());
 			if (g_mineSets.find(setHash) != g_mineSets.end())
 			{
 				ScriptLog.Write(LogLevel::LOG_ERROR, fmt::format("A MineSet node ({}) is defined already, skipping it.", name.value()));
 				continue;
 			}
 
-			Hash modelHash = MISC::GET_HASH_KEY(model.value());
+			Hash modelHash = joaat::generate(model.value());
 			if (!STREAMING::IS_MODEL_VALID(modelHash))
 			{
 				ScriptLog.Write(LogLevel::LOG_ERROR, fmt::format("A MineSet node ({}) has an invalid model ({}), skipping it.", name.value(), model.value()));
@@ -144,7 +144,7 @@ void ScriptInit()
 
 			for (pugi::xml_node setItem : node.children("Item"))
 			{
-				data.weaponHashes.push_back(MISC::GET_HASH_KEY(setItem.text().as_string()));
+				data.weaponHashes.push_back(joaat::generate(setItem.text().as_string()));
 				ScriptLog.Write(LogLevel::LOG_DEBUG, fmt::format("Added {} to {}.", setItem.text().as_string(), name.value()));
 			}
 
@@ -168,14 +168,14 @@ void ScriptInit()
 				continue;
 			}
 
-			Hash setHash = MISC::GET_HASH_KEY(mineSet.value());
+			Hash setHash = joaat::generate(mineSet.value());
 			if (g_mineSets.find(setHash) == g_mineSets.end())
 			{
 				ScriptLog.Write(LogLevel::LOG_ERROR, fmt::format("A VehicleModels node ({}) contains an invalid mineSet ({}), skipping it.", name.value(), mineSet.value()));
 				continue;
 			}
 
-			g_vehicleModels[ MISC::GET_HASH_KEY(name.value()) ] = setHash;
+			g_vehicleModels[ joaat::generate(name.value()) ] = setHash;
 			ScriptLog.Write(LogLevel::LOG_DEBUG, fmt::format("Loaded vehicle: {}, mineSet: {}.", name.value(), mineSet.value()));
 		}
 
@@ -243,7 +243,7 @@ void ScriptUpdate()
 		vVar7.z += 0.2f;
 		vVar8.z += 0.2f;
 
-		float fVar9 = (vehicleModel == VehicleModel::SPEEDO4 || func_8651(currentVehicle, vehicleModel)) ? 1.0f : 0.7f;
+		float fVar9 = (vehicleModel == joaat::generate("speedo4") || func_8651(currentVehicle, vehicleModel)) ? 1.0f : 0.7f;
 		Vector3 vVar10 = func_8595(vVar7, vVar8, 0.0f, 1.0f, fVar9);
 		vVar7.z -= 0.2f;
 		vVar8.z -= 0.2f;

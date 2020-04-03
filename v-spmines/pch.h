@@ -10,6 +10,8 @@
 #include <string>
 #include <unordered_map>
 
+#include "joaat.h"
+
 // fmt
 #include "fmt/format.h"
 #include "fmt/chrono.h"

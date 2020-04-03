@@ -7,23 +7,6 @@ struct MineSetData
 	std::vector<Hash> weaponHashes;
 };
 
-enum VehicleModel : Hash
-{
-	SPEEDO4 = 0x0D17099D,
-	ZR380 = 0x20314B42,
-	ZR3802 = 0xBE11EFC6,
-	ZR3803 = 0xA7DCC35C,
-	DEATHBIKE = 0xFE5F0722,
-	DEATHBIKE2 = 0x93F09558,
-	DEATHBIKE3 = 0xAE12C99C,
-	IMPERATOR = 0x1A861243,
-	IMPERATOR2 = 0x619C1B82,
-	IMPERATOR3 = 0xD2F77E37,
-	SLAMVAN4 = 0x8526E2F5,
-	SLAMVAN5 = 0x163F8520,
-	SLAMVAN6 = 0x67D52852
-};
-
 const unsigned int INPUT_VEH_HORN = 86;
 const unsigned int MineCooldown = 750; // In milliseconds
 
